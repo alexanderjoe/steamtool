@@ -1,4 +1,9 @@
-interface SteamGame {
+export interface SteamUser {
+    id: string
+    username: string
+}
+
+export interface Game {
     appid: number;
     name: string;
     playtime_forever: number;
@@ -12,22 +17,6 @@ interface SteamGame {
     playtime_disconnected: number;
 }
 
-interface LibraryMap {
-    [appid: number]: {
-        game: SteamGame;
-        owners: string[];
-    };
-}
-
-interface FriendEntry {
-    id: string;
-    name: string;
-}
-
-interface GameEntry {
-    game: {
-        appid: number;
-        name: string;
-    };
-    owners: string[];
+export interface ProcessedGame extends Game {
+    ownedBy: number
 }
