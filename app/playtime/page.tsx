@@ -1,7 +1,7 @@
-import SteamLibraryCompare from '@/components/steam-library-compare';
+import SteamPlaytimeTracker from '@/components/steam-playtime-tracker';
 import Link from 'next/link';
 
-export default function Home() {
+export default function PlaytimePage() {
   return (
     <main className="">
       <div className="bg-gray-900 min-h-screen">
@@ -9,18 +9,18 @@ export default function Home() {
           <div className="flex justify-center gap-4 mb-8">
             <Link
               href="/"
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
+              className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors font-semibold"
             >
               Library Compare
             </Link>
             <Link
               href="/playtime"
-              className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors font-semibold"
+              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-semibold"
             >
               Playtime Tracker
             </Link>
           </div>
-          <SteamLibraryCompare />
+          <SteamPlaytimeTracker />
         </div>
       </div>
     </main>
